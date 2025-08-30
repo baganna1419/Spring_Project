@@ -1,0 +1,28 @@
+package org.jsp.annotations.configuration;
+
+import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+
+public class DispatcherServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
+	@Override
+	protected Class<?>[] getRootConfigClasses() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	protected Class<?>[] getServletConfigClasses() {
+//		Class c[] = new Class[] { StudentConfiguration.class };
+//		                  (or)
+
+		Class c[] = { StudentConfiguration.class };
+		return c;
+	}
+
+	@Override
+	protected String[] getServletMappings() {
+		String string[] = { "/" };
+		return string;
+	}
+
+}

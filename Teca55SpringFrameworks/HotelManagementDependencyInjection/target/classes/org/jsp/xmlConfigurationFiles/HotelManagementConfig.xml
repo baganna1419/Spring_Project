@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- Object of permanet -->
+	<bean id="per" class="com.jsp.setterinjection.Permanent">
+		<property name="houseNum" value="5-41" />
+		<property name="landmark" value="Nehru" />
+		<property name="area" value="Narayanaraopet" />
+		<property name="state" value="Telanagana" />
+		<property name="city" value="Siddipet" />
+		<property name="nation" value="Indian" />
+	</bean>
+	<!-- Object of Tempary -->
+
+	<bean id="tem" class="com.jsp.setterinjection.Temparary">
+		<property name="houseNum" value="7-41" />
+		<property name="landmark" value="Bustand" />
+		<property name="area" value="Siddipet" />
+		<property name="state" value="Telanagana" />
+		<property name="city" value="Hyderbad" />
+		<property name="nation" value="Indian" />
+	</bean>
+	<!-- Object of Current -->
+
+	<bean id="cur" class="com.jsp.setterinjection.Current">
+		<property name="houseNum" value="8-41" />
+		<property name="landmark" value="Gandhi" />
+		<property name="area" value="Warangal" />
+		<property name="state" value="Telanagana" />
+		<property name="city" value="Cherlaplly]" />
+		<property name="nation" value="Indian" />
+	</bean>
+	<!-- Object of Luxary -->
+
+
+	<bean id="lux" class="com.jsp.setterinjection.Luxury">
+		<property name="type" value="Ac" />
+		<property name="typeOfRoom" value="2Bhk" />
+	</bean>
+	<!-- Object of Delux -->
+
+	<bean id="del" class="com.jsp.setterinjection.Delux">
+		<property name="type" value="Non-Ac" />
+		<property name="typeOfRoom" value="1Bhk" />
+	</bean>
+	<!-- Object of Normal -->
+
+	<bean id="Nor" class="com.jsp.setterinjection.Normal">
+		<property name="type" value="Non-Ac" />
+		<property name="typeOfRoom" value="5Bhk" />
+	</bean>
+	<!-- Object of CustomerDetails -->
+
+	<bean id="cust" class="com.jsp.setterinjection.CustomerDetails">
+		<property name="name" value="Baganna Nithin Kumar" />
+		<property name="age" value="22" />
+		<property name="gender" value="male" />
+		<property name="mobileNum" value="8919801658" />
+		<property name="address" value="SDPT" />
+	</bean>
+
+	<!-- HotelManagement -->
+	<bean id="hotel" class="com.jsp.setterinjection.HotelManagement">
+		<property name="name" value="Green Bawarchi" />
+		<property name="address" ref="per" />
+		<property name="numberOfRooms" value="10" />
+		<property name="customer" ref="cust" />
+		<property name="price" value="15000" />
+		<property name="ratings" value="4" />
+		<property name="type" ref="lux" />
+		<property name="numberOfRoomsOccupied" value="5" />
+		<property name="numberOfRoomsEmpty" value="5" />
+	</bean>
+
+</beans>
+<!-- <property name="dateOfBith" value="Calendar cal = Calendar.getInstance(); 
+	cal.set(Calendar.YEAR,2006); cal.set(Calendar.MONTH,06); cal.set(Calendar.DAY_OF_MONTH,29); 
+	Date d = cal.getTime();" /> --> 

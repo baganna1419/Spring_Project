@@ -1,0 +1,17 @@
+1):-WAPT PERFORM DEPENDENCY INJECTION FOR HOTEL MANAGEMENT.
+2):-HotelManagement properties are 
+    .Name
+    .Address
+    .Num of Rooms
+    .Customer
+    .Price
+    .Ratings
+    .Type
+    .Num of Rooms Occupied
+    .Num of Rooms Empty
+3):-In Hotel Properties
+    .Address
+    .Customer
+    .type are Interfaces
+4):-Create minimum three imp for each interface
+ and perform dependency Injection

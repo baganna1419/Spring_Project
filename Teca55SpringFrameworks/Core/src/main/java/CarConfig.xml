@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+ <bean  id="car1" class="org.jsp.Core.Car">
+ <constructor-arg value="Benz"></constructor-arg>
+ <constructor-arg value="Maruthi"></constructor-arg>
+ <constructor-arg value="60"></constructor-arg>
+ <constructor-arg value="Black"></constructor-arg>
+ <constructor-arg value="2200000"></constructor-arg>
+ </bean>
+ <bean  id="car2" class="org.jsp.Core.Car">
+ <constructor-arg value="Shift"></constructor-arg>
+ <constructor-arg value="Honda"></constructor-arg>
+ <constructor-arg value="50"></constructor-arg>
+ <constructor-arg value="White"></constructor-arg>
+ <constructor-arg value="4200000"></constructor-arg>
+ </bean>
+ <bean  id="car3" class="org.jsp.Core.Car">
+ <constructor-arg value="Fortuner"></constructor-arg>
+ <constructor-arg value="Suzuki"></constructor-arg>
+ <constructor-arg value="40"></constructor-arg>
+ <constructor-arg value="Ash"></constructor-arg>
+ <constructor-arg value="8200000"></constructor-arg>
+ </bean>
+
+</beans>

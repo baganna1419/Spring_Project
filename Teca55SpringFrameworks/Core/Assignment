@@ -1,0 +1,5 @@
+=>Create a bean class for car
+=>with multiple properties like car name,brand,color,price,milage.
+=>create an xml file to create 3 different objects for car class by performing constructor injection.
+=>create a main class and access all three objects with three Different Values from IOC container.
+

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- Date Object -->
+	<bean id="da" class="java.util.Date">
+	</bean>
+
+	<!-- Permanent class Object -->
+	<bean id="per" class="com.jsp.setterinjection.PermanentAddress">
+		<property name="doorNumber" value="5-41/1" />
+		<property name="streetNumber" value="2" />
+		<property name="area" value="Narayanaraopet" />
+		<property name="landmark" value="Nehru Bustand" />
+		<property name="city" value="Siddipet" />
+		<property name="state" value="Telanagana" />
+		<property name="nation" value="Indian" />
+	</bean>
+	<!-- Current class Object -->
+	<bean id="cur" class="com.jsp.setterinjection.CurrentAddress">
+		<property name="doorNumber" value="7-41/1" />
+		<property name="streetNumber" value="5" />
+		<property name="area" value="KPHB" />
+		<property name="landmark" value="Temple Bustand" />
+		<property name="city" value="Hyderabad" />
+		<property name="state" value="Telanagana" />
+		<property name="nation" value="Indian" />
+	</bean>
+
+	<!-- Shirt Class Object -->
+	<bean id="sh" class="com.jsp.setterinjection.Shirt">
+		<property name="type" value="Lenin" />
+		<property name="color" value="Black" />
+		<property name="cost" value="500" />
+		<property name="quantity" value="1" />
+		<property name="size" value="M" />
+
+	</bean>
+
+	<!-- Hoodie Class Object -->
+	<bean id="ho" class="com.jsp.setterinjection.Hoodie">
+		<property name="type" value="Cotton" />
+		<property name="color" value="White" />
+		<property name="cost" value="800" />
+		<property name="quantity" value="4" />
+		<property name="size" value="l" />
+
+	</bean>
+
+	<!-- Customer class -->
+	<bean id="cust" class="com.jsp.setterinjection.Customer">
+		<property name="name" value="Baganna Sania" />
+		<property name="dateOfBirth" ref="da" />
+		<property name="mobile" value="8919801658" />
+		<property name="address" ref="cur" />
+		<property name="product" ref="ho" />
+		<property name="email" value="sania@gmail.com" />
+		<property name="userName" value="Baganna Sania My World" />
+		<property name="password" value="amma" />
+
+
+	</bean>
+
+
+
+</beans>
+<!--  <property name="dateOfBith" value="Calendar cal = Calendar.getInstance(); 
+			cal.set(Calendar.YEAR,2006); cal.set(Calendar.MONTH,06); cal.set(Calendar.DAY_OF_MONTH,29); 
+			Date d = cal.getTime();" /> --> 

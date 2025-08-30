@@ -1,0 +1,9 @@
+INDEX VERSION 1.132
+D:\Teca55SpringFrameworks\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4231701895.index
+\SpringMvcClassConfiguration\src\main\resources
+D:\Teca55SpringFrameworks\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3188558668.index
+\SpringMvcClassConfiguration\src\main\java
+D:\Teca55SpringFrameworks\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3161775438.index
+\SpringMvcLearnings\src\main\resources
+D:\Teca55SpringFrameworks\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\893552416.index
+\SpringMVC\src\main\resources

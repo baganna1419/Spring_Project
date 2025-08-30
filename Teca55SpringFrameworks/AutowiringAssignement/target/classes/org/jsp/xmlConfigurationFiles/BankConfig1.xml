@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!-- Dependent Object Bank 
+	<bean id="ban" class="org.jsp.autowiring.Bank" scope="prototype"
+		autowire="byName">
+		<property name="bankname" value="SBI" />
+		<property name="ifsc" value="SBI6772181" />
+		<property name="branch" ref="branch" />
+		<property name="address" ref="perm" />
+		<property name="account" ref="curr" />
+	</bean>
+	-->
+	
+	<!-- By Name Of Branch -->
+	<!-- Dependency Object Kukatapally 
+	<bean id="branch" class="org.jsp.autowiring.Kukatpally"
+		scope="prototype" >
+		<property name="yearOfEstablishement" value="2006" />
+		<property name="mobileNumber" value="9876543210" />
+		<property name="state" value="Telangana" />
+		<property name="country" value="India" />
+	</bean>
+	-->
+	
+	<!-- Dependency Object Hightech 
+	<bean id="branch1" class="org.jsp.autowiring.HightechCity"
+		scope="prototype" >
+		<property name="yearOfEstablishement" value="2002" />
+		<property name="mobileNumber" value="90000003210" />
+		<property name="state" value="Warangal" />
+		<property name="country" value="Us" />
+	</bean>
+	-->
+	
+	
+	<!-- byType Of Branch -->
+	<!-- Dependency Object Kukatapally -->
+	
+	<!-- Dependency Object of Current Account 
+	<bean id="curr" class="org.jsp.autowiring.CurrentAccount"
+		scope="prototype">
+		<property name="accountNumber" value="1919199199191" />
+		<property name="accountHolderName" value="Baganna Sania" />
+		<property name="mobileNumber" value="Telangana" />
+		<property name="email" value="sania@gmail.com" />
+		<property name="balance" value="88989" />
+	</bean>
+	-->
+	<!-- Dependency Object of Savings Account 
+	<bean id="sav" class="org.jsp.autowiring.SavingsAccount"
+		scope="prototype">
+		<property name="accountNumber" value="9189188199199191" />
+		<property name="accountHolderName" value="Baganna Sania" />
+		<property name="mobileNumber" value="Telangana" />
+		<property name="email" value="sania@gmail.com" />
+		<property name="balance" value="88989" />
+	</bean>
+	-->
+	
+	
+	
+
+	<!--Dependency Object of Permanent Address 
+	<bean id="perm" class="org.jsp.autowiring.PermanentAddress" scope="prototype">
+		<property name="hno" value="5-41/1" />
+		<property name="location" value="Hyderabad" />
+		<property name="landmark" value="Siddipet" />
+		<property name="state" value="India" />
+		<property name="nation" value="Indian" />
+    
+	</bean>
+	  -->
+	<!--Dependency Object of Permanent Address 
+	<bean id="curr" class="org.jsp.autowiring.CurrentAddress" scope="prototype">
+		<property name="hno" value="8-41/1" />
+		<property name="location" value="Warangal" />
+		<property name="landmark" value="Nrpt" />
+		<property name="state" value="America" />
+		<property name="nation" value="London" />
+
+	</bean>
+	-->
+	
+	
+	
+	
+	
+	<!-- Dependent Object Bank -->
+	<bean id="ban" class="org.jsp.autowiring.Bank" scope="prototype"
+		autowire="byName">
+		<property name="bankname" value="SBI" />
+		<property name="ifsc" value="SBI6772181" />
+	</bean>
+	
+	<!-- byType Of Branch -->
+	<!-- Dependency Object Kukatapally -->
+	<bean id="branch1" class="org.jsp.autowiring.Kukatpally"
+		scope="prototype" autowire-candidate="true" >
+		<property name="yearOfEstablishement" value="2006" />
+		<property name="mobileNumber" value="9876543210" />
+		<property name="state" value="Telangana" />
+		<property name="country" value="India" />
+	</bean>
+	
+	<!-- Dependency Object Hightech -->
+	<bean id="branch" class="org.jsp.autowiring.HightechCity"
+		scope="prototype"  autowire-candidate="false">
+		<property name="yearOfEstablishement" value="2002" />
+		<property name="mobileNumber" value="90000003210" />
+		<property name="state" value="Warangal" />
+		<property name="country" value="Us" />
+	</bean>
+	
+		<!-- Dependency Object of Current Account -->
+	<bean id="account1" class="org.jsp.autowiring.CurrentAccount"
+		scope="prototype"  autowire-candidate="false">
+		<property name="accountNumber" value="1919199199191" />
+		<property name="accountHolderName" value="Baganna Sania" />
+		<property name="mobileNumber" value="Telangana" />
+		<property name="email" value="sania@gmail.com" />
+		<property name="balance" value="88989" />
+	</bean>
+	
+	<!-- Dependency Object of Savings Account -->
+	<bean id="account" class="org.jsp.autowiring.SavingsAccount"
+		scope="prototype"  autowire-candidate="true">
+		<property name="accountNumber" value="9189188199199191" />
+		<property name="accountHolderName" value="Baganna Sania" />
+		<property name="mobileNumber" value="Telangana" />
+		<property name="email" value="sania@gmail.com" />
+		<property name="balance" value="88989" />
+	</bean>
+	
+	<!--Dependency Object of Permanent Address -->
+	<bean id="address1" class="org.jsp.autowiring.PermanentAddress" scope="prototype"  autowire-candidate="false">
+		<property name="hno" value="5-41/1" />
+		<property name="location" value="Hyderabad" />
+		<property name="landmark" value="Siddipet" />
+		<property name="state" value="India" />
+		<property name="nation" value="Indian" />
+
+	</bean>
+	
+	<!--Dependency Object of Permanent Address -->
+	<bean id="address" class="org.jsp.autowiring.CurrentAddrees" scope="prototype"  autowire-candidate="true">
+		<property name="hno" value="8-41/1" />
+		<property name="location" value="Warangal" />
+		<property name="landmark" value="Nrpt" />
+		<property name="state" value="America" />
+		<property name="nation" value="London" />
+
+	</bean>
+
+
+
+</beans>
+<!-- <property name="dateOfBith" value="Calendar cal = Calendar.getInstance(); 
+	cal.set(Calendar.YEAR,2006); cal.set(Calendar.MONTH,06); cal.set(Calendar.DAY_OF_MONTH,29); 
+	Date d = cal.getTime();" /> --> 

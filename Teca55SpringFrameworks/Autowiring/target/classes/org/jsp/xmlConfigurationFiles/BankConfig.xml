@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+	<!-- Dependent object Bank -->
+	<bean id="bk" class="org.jsp.autowiring.Bank" autowire="constructor" scope="prototype">
+		<property name="bankname" value="SBI" />
+		<property name="branch" value="Siddipet" />
+		<property name="ifsc" value="SBI122334" />
+		<property name="address" value="Narayanaraopet" />
+	</bean>
+	
+	<!-- Dependency Object Savings Account -->
+	<bean id="sa" class="org.jsp.autowiring.SavingsAccount"
+		scope="prototype" autowire-candidate="true">
+		<constructor-arg name="accountNumber"
+			value="123456789898" />
+		<constructor-arg name="accountHolderName"
+			value="Baganna Nithin Kumar" />
+		<constructor-arg name="mobileNumber"
+			value="8919801658" />
+		<constructor-arg name="email"
+			value="nithinbaganna@gmail.com" />
+		<constructor-arg name="balance" value="50000" />
+	</bean>
+
+	<!-- Dependency Object CurrentAccount -->
+	<bean id="ca" class="org.jsp.autowiring.CurrentAccount "
+		scope="prototype" autowire-candidate="false">
+		<constructor-arg name="accountNumber"
+			value="99999999998" />
+		<constructor-arg name="accountHolderName"
+			value="Baganna Sania " />
+		<constructor-arg name="mobileNumber"
+			value="9676185664" />
+		<constructor-arg name="email"
+			value="saniabaganna@gmail.com" />
+		<constructor-arg name="balance" value="30000" />
+	</bean>
+</beans>
+<!-- <property name="dateOfBith" value="Calendar cal = Calendar.getInstance(); 
+	cal.set(Calendar.YEAR,2006); cal.set(Calendar.MONTH,06); cal.set(Calendar.DAY_OF_MONTH,29); 
+	Date d = cal.getTime();" /> --> 

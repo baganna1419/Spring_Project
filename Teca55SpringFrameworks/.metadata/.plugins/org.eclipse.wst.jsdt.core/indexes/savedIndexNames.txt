@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+D:\Teca55SpringFrameworks\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2405932582.index
+140374432.index
+2919472633.index
+1054801176.index
+1114684342.index
+1008472939.index
+2954979078.index

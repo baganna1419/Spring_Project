@@ -1,0 +1,5 @@
+1.Create Laptop class.
+2.Properties are Name,Brand,Color,Price,Keyboard,mouse,cpu.
+3.Keyboard,mouse,cpu are classes.
+4.Perform the dependency injection with laptop class for all Three class.
+5.Perform configuration with @annotations.

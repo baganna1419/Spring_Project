@@ -1,0 +1,86 @@
+package com.jsp.jdbc.dao;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.jsp.jdbc.entity.Voter;
+
+@Repository("voterDao")
+public class IVoterDaoImplementation implements IVoterDao {
+	@Autowired
+	private JdbcTemplate template;
+
+	public int addVoters(Voter voter) {
+		String query = "insert into voters(voter_Id, voter_Name, voter_Age, voter_Address, voter_Gender, voter_Mobile) values(?,?,?,?,?,?)";
+		return template.update(query, voter.getVoter_Id(), voter.getVoter_Name(), voter.getVoter_Age(),
+				voter.getVoter_Address(), voter.getVoter_Gender(), voter.getVoter_Mobile());
+	}
+
+	public int updateMobileNumber(String voterName, String mobileNumber) {
+		String update = "update voters set voter_Mobile=? where voter_Name=?";
+		return template.update(update, mobileNumber, voterName);
+	}
+
+	public int removeVoterDetailsBasedOnVoterId(int voterId) {
+		String delete = "delete from voters where voter_Id=?";
+		return template.update(delete, voterId);
+	}
+
+	public int updateVoterNameById(String voterName, int voterId) {
+		String update = "update voters set voter_Name=? where voter_Id=?";
+		return template.update(update, voterName, voterId);
+
+	}
+
+	public int updateVoterAgeByNameAndId(int voterId, String voterName, int age) {
+		String update = "update voters set voter_Age=? where (voter_Id=?) && (voter_Name=?)";
+		return template.update(update, age, voterId, voterName);
+
+	}
+
+	public int updateVoterGenderById(int voterId, String voterGender) {
+		String update = "update voters set voter_Gender=? where voter_Id=?";
+		return template.update(update,voterGender,voterId);
+		
+		
+	}
+
+	public int updateVoterMobileNumberByIdAndName(int voterId, String voterName, String voterMobile) {
+		String update = "update voters set voter_Mobile=? where (voter_Id=?) && (voter_Name=?)";
+		return template.update(update, voterMobile, voterId, voterName);
+	
+		
+	}
+
+	public int updateVoterAddressByIdAndMobile(int voterId, String voterMobile, String address) {
+		String update = "update voters set voter_Address=? where (voter_Id=?) && (voter_Mobile=?)";
+		return template.update(update, address, voterId, voterMobile);
+		
+		
+		
+	}
+
+	public int deleteVoterById(int voterId) {
+		String delete = "delete from voters where voter_Id=?";
+		return template.update(delete, voterId);
+	
+		
+	}
+
+	public int deleteVoterByIdAndMobile(int voterId, String voterMobile) {
+		String delete = "delete from voters where (voter_Id=?) &&(voter_Mobile=?)";
+		return template.update(delete, voterId,voterMobile);
+	
+		
+	}
+
+	public int deleteVoterByNameAndAddress(String name,String address) {
+		String delete = "delete from voters where (voter_Name=?) &&(voter_Address=?)";
+		return template.update(delete, name,address);
+		
+	}
+	
+	
+
+}

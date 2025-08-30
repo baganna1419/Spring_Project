@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+	
+	<bean id="mob" class="org.jsp.MobileAndBattery.entity.Mobile" autowire="byName">
+	     <constructor-arg name="brand" value="Samsung"/>
+	     <constructor-arg name="price" value="250000"/>
+	     <constructor-arg name="color" value="Green"/>
+	     <constructor-arg name="battery" ref="bat"/>
+	</bean>
+	<bean id="bat" class="org.jsp.MobileAndBattery.entity.Battery">
+	<constructor-arg name="capacity" value="5000"/>
+	</bean>
+
+
+</beans>
