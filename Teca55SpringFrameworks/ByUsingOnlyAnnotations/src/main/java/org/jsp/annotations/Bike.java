@@ -16,6 +16,8 @@ public class Bike {
 	private double price;
 	private Date date;
     private int price1;
+    private double salary;
+    
 	public Bike() {
 		System.out.println("No-Argument Constructor of Bike class...!!!!");
 	}
