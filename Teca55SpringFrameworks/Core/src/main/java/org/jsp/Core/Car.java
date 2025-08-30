@@ -6,6 +6,7 @@ public class Car {
 	private int milage;
 	private String color;
 	private double price;
+	private int cost;
 	
 	public Car() {
 	}
